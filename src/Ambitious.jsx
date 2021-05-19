@@ -9,7 +9,7 @@ import FinalScreen from "./components/FinalScreen";
 const Ambitious = () => {
   const [points, setPoints] = useState(0);
   const [counterLaunchs, setCounterLaunchs] = useState(0);
-  const [isVisibleFinal, setIsVisibleFinal] = useState(true);
+  const [isVisibleFinal, setIsVisibleFinal] = useState(false);
 
   const finishGame = () => {
     const body = document.getElementsByClassName("opaqueFont")[0];
