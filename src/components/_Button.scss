@@ -1,18 +1,16 @@
-@import "https://fonts.googleapis.com/css?family=Rubik+One";
-
 body,
 html {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  background: #e53935;
+  background: #389e0d;
 }
 
 %test {
   position: absolute;
   content: "";
-  transition: all 0.5s;
+  transition: all 0.1s;
 }
 
 .button {
@@ -29,7 +27,7 @@ html {
   font-family: "Rubik One", sans-serif;
   text-decoration: none;
   font-size: 50px;
-  transition: all 0.5s;
+  transition: all 0.1s;
   background-color: #3498db;
 
   &::before {

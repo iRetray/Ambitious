@@ -1,22 +1,21 @@
 import React, { Fragment, useState } from "react";
-import "./styles.scss";
 
-import Title from "./components/Title";
-import Button from "./components/Button";
-import Dice from "./components/Dice";
-import FinalScreen from "./components/FinalScreen";
+import Title from "../components/Title";
+import Button from "../components/Button";
+import Dice from "../components/Dice";
 
-const Ambitious = () => {
+const AmbitiousGame = ({ history }) => {
   const [points, setPoints] = useState(0);
   const [counterLaunchs, setCounterLaunchs] = useState(0);
-  const [isVisibleFinal, setIsVisibleFinal] = useState(false);
 
-  const finishGame = () => {
-    const body = document.getElementsByClassName("opaqueFont")[0];
-    body.className = "notOpaque";
-    setPoints(0);
-    setCounterLaunchs(0);
-    setIsVisibleFinal(false);
+  const goToFinishPage = () => {
+    history.push({
+      pathname: "/finish",
+      results: {
+        points: points,
+        launchs: counterLaunchs,
+      },
+    });
   };
 
   const getResultNumber = () => {
@@ -25,7 +24,7 @@ const Ambitious = () => {
       setCounterLaunchs(counterLaunchs + 1);
       const numberDice = parseInt(resultDice);
       if (numberDice === 1) {
-        setIsVisibleFinal(true);
+        goToFinishPage();
       } else {
         setPoints(points + numberDice);
       }
@@ -54,18 +53,11 @@ const Ambitious = () => {
 
   return (
     <Fragment>
-      <Title />
+      <Title points={points} launchs={counterLaunchs} />
       <Dice />
       <Button rollDice={rollDice} />
-      {isVisibleFinal && (
-        <FinalScreen
-          finalScore={points}
-          timesLaunched={counterLaunchs}
-          finishGame={finishGame}
-        />
-      )}
     </Fragment>
   );
 };
 
-export default Ambitious;
+export default AmbitiousGame;

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Ambitious from "./Ambitious";
+import AmbitiousRouter from "./AmbitiousRouter";
+import "./styles.scss";
 
-ReactDOM.render(<Ambitious />, document.getElementById("root"));
+ReactDOM.render(<AmbitiousRouter />, document.getElementById("root"));

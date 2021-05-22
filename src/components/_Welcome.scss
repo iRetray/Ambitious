@@ -1,0 +1,48 @@
+.WelcomeMainContainer {
+  position: absolute;
+  background-color: #fadb14;
+  height: 100vh;
+  width: 100vw;
+  .textContainer {
+    background-color: #1890ff;
+    color: white;
+    text-align: center;
+    margin-top: 15vh;
+    padding: 30px;
+    .titleGame {
+      padding: 10px;
+      font-size: 6vh;
+      font-weight: bold;
+      border: 5px white solid;
+    }
+    .instructions {
+      padding-top: 20px;
+      font-size: 20px;
+      .dangerText {
+        color: #000000;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.btn {
+  border: none;
+  font-family: "Lato";
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #000000;
+}
